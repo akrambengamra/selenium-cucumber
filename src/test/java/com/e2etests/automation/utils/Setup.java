@@ -31,14 +31,14 @@ public class Setup {
 				driver = new ChromeDriver(chromeOptions);
 				driver.manage().window().maximize();
 				
-			case "firefox":
-				System.setProperty("webdriver.http.factory", "jdk-http-client");
-				FirefoxProfile profile = new FirefoxProfile();
-				FirefoxOptions firefoxOptions = new FirefoxOptions();
-				WebDriverManager.firefoxdriver().setup();
-				firefoxOptions.setCapability("platform", Platform.WIN10);
-				firefoxOptions.setProfile(profile);
-				driver = new FirefoxDriver();
+//			case "firefox":
+//				System.setProperty("webdriver.http.factory", "jdk-http-client");
+//				FirefoxProfile profile = new FirefoxProfile();
+//				FirefoxOptions firefoxOptions = new FirefoxOptions();
+//				WebDriverManager.firefoxdriver().setup();
+//				firefoxOptions.setCapability("platform", Platform.WIN10);
+//				firefoxOptions.setProfile(profile);
+//				driver = new FirefoxDriver();
 				break;
 				default :
 					throw new IllegalArgumentException("Browser\""+ browser + "is not supported");
